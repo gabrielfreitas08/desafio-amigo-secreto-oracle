@@ -1,7 +1,7 @@
 var adicionarNome = [];
 
 var exibirNome = document.getElementById("listaAmigos");
-
+var exibirResultado = document.getElementById("resultado");
 
 function adicionarAmigo() {
     
@@ -19,4 +19,16 @@ function limparCampo() {
     
     pegarNome = document.getElementById("amigo");
     pegarNome.value = "";
+}
+
+function sortearAmigo() {
+    
+    let quantidadeNome = adicionarNome.length;
+    let indiceSorteio = parseInt(Math.random() * quantidadeNome + 1);
+    //console.log(indiceSorteio);
+    
+    let resultado = adicionarNome[indiceSorteio]
+    console.log(resultado);
+
+    exibirResultado.innerHTML = resultado;
 }
